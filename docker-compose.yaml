@@ -1,0 +1,12 @@
+services:
+  apache:
+    image: httpd:latest
+    container_name: apache_container
+    ports:
+    - '8080:80'
+    volumes:
+    - .:/usr/local/apache2/htdocs
+
+# docker ps -a
+# docker exec -ti 860ea24c1239 /bin/bash
+# docker-compose up --build    
